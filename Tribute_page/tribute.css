@@ -1,0 +1,101 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    color: #ffffff; /* Ensure the text color contrasts with the background */
+    margin: 0.5em 0;
+    font-size: 2.5em; /* Adjust font size as needed */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add shadow to enhance visibility */
+}
+
+
+header {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    border-bottom: 4px solid #004d40;
+}
+
+.profile-pic {
+    width: 750px; /* Increase the width of the image to 750px (3 times the original size) */
+    border-radius: 50%;
+    border: 10px solid #004d40; /* Adjust border width for larger image */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+.intro, .details {
+    margin: 20px auto;
+    padding: 40px;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: 'Merriweather', serif;
+    color: #004d40;
+}
+
+h1 {
+    margin-bottom: 0.5em;
+    font-size: 2.5em;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #004d40;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 0.9em;
+}
+
+/* Media Queries for Smaller Screens */
+
+@media (max-width: 768px) {
+    .profile-pic {
+        width: 500px; /* Adjust image size for medium screens */
+    }
+
+    .intro, .details {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-pic {
+        width: 375px; /* Adjust image size for small screens */
+    }
+
+    .intro, .details {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
