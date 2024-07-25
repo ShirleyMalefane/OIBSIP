@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Secured Page</title>
+    <link rel="stylesheet" href="secured.css">
 </head>
 <body>
-    <h2>Welcome to the Secured Page!</h2>
-    <p>You must be logged in and have a verified email to see this page.</p>
-    <button id="logoutButton">Logout</button>
-    <script type="module" src="secured.js"></script>
+    <div class="container">
+        <h2>Welcome to the Secured Page!</h2>
+        <button id="logoutButton">Logout</button>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js"></script>
+    <script src="secured.js"></script>
 </body>
 </html>

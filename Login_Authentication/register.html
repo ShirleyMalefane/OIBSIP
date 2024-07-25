@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Register</title>
-    <link rel="stylesheet" type="text/css" href="register.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="register.css">
 </head>
 <body>
     <div class="container">
         <h2>Register</h2>
         <form id="registerForm">
-            <label for="registerName">Name:</label>
-            <input type="text" id="registerName" required><br><br>
-            <label for="registerLastName">Last Name:</label>
-            <input type="text" id="registerLastName" required><br><br>
-            <label for="registerUsername">Email:</label>
-            <input type="email" id="registerUsername" required><br><br>
-            <label for="registerPassword">Password:</label>
-            <input type="password" id="registerPassword" required><br><br>
-            <label for="registerConfirmPassword">Confirm Password:</label>
-            <input type="password" id="registerConfirmPassword" required><br><br>
+            <input type="text" id="registerName" placeholder="Name" required>
+            <input type="text" id="registerLastName" placeholder="Last Name" required>
+            <input type="email" id="registerEmail" placeholder="Email" required>
+            <input type="password" id="registerPassword" placeholder="Password" required>
+            <input type="password" id="registerConfirmPassword" placeholder="Confirm Password" required>
             <button type="submit">Register</button>
         </form>
         <p>Already have an account? <a href="login.html">Login here</a></p>

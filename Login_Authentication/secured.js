@@ -1,7 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDzkFcCXn0dkYd54KKoeeDprrYhxVf3Xqo",
   authDomain: "login-authentication-35fe5.firebaseapp.com",
@@ -12,26 +11,21 @@ const firebaseConfig = {
   measurementId: "G-C4GT6RZSMQ"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// Check if user is logged in and email is verified
-onAuthStateChanged(auth, user => {
-    if (user && user.emailVerified) {
-        console.log('User is logged in and email is verified:', user);
-    } else {
-        console.log('User is not logged in or email is not verified');
-        window.location.href = 'login.html'; // Redirect to login page
+auth.onAuthStateChanged(user => {
+    if (!user || !user.emailVerified) {
+        window.location.href = 'login.html';
     }
 });
 
-// Logout button event
-document.getElementById('logoutButton').addEventListener('click', () => {
-    signOut(auth).then(() => {
-        console.log('User logged out');
-        window.location.href = 'login.html'; // Redirect to login page
-    }).catch((error) => {
+document.getElementById('logoutButton').addEventListener('click', async () => {
+    try {
+        await signOut(auth);
+        alert('Logged out successfully!');
+        window.location.href = 'login.html';
+    } catch (error) {
         console.error('Error during logout:', error.message);
-    });
+    }
 });
